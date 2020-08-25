@@ -43,7 +43,7 @@ public class bj15650 {
 				if (!(check[i] == 1)) {
 					check[i] = 1;
 					arr[k] = i;
-					sol(k + 1 , start + 1);
+					sol(k + 1 , i);
 					check[i] = 0;
 				}
 			}
