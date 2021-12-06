@@ -1,4 +1,4 @@
-package rudghks373;
+package rudghks373.dp;
 
 import java.util.Scanner;
 
