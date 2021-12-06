@@ -12,6 +12,7 @@ public class bj1110 {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int N = Integer.parseInt(br.readLine());
 		br.close();
+
 		int count = 0;
 		int check = N;
 
