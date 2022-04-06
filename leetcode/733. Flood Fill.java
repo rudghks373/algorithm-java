@@ -1,0 +1,25 @@
+class Solution {
+    public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+        int oldColor = image[sr][sc];
+        if (oldColor == newColor){
+            return image;
+        }
+        image[sr][sc] = newColor;
+        return dfs(image,sr,sc, oldColor);
+    }
+    
+    private int[][] dfs(int[][] image, int sr, int sc, int oldColor){
+        int[][] move = new int[][]{{1,0},{-1,0},{0,1},{0,-1}};
+        for(int i = 0; i < 4; i++){
+            int m = sr + move[i][0];
+            int n = sc + move[i][1];
+            if (m >= 0 && m < image.length && n >= 0 && n < image[0].length) {
+                if (image[m][n] == oldColor){
+                    image[m][n] = image[sr][sc];
+                    image = dfs(image, m, n, oldColor);
+                }
+            }
+        }
+    return image;
+    }
+}
